@@ -6,6 +6,7 @@ import Category from './pages/Category';
 import Product from './pages/Product';
 import Login from './pages/Login';
 import Cart from './pages/Cart';
+import ErrorPage from './pages/ErrorPage';
 function App() {
 
   const router = createBrowserRouter([
@@ -33,6 +34,11 @@ function App() {
       path: 'cart',
       element: <Cart />
     },
+
+    {
+      path: '*',
+      element: <ErrorPage />
+    }
   ])
 
   return (
