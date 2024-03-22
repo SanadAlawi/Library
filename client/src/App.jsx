@@ -1,43 +1,65 @@
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import './App.css';
-import Home from './pages/Home';
-import Menu from './pages/Menu';
-import Category from './pages/Category';
-import Product from './pages/Product';
-import Login from './pages/Login';
-import Cart from './pages/Cart';
-import ErrorPage from './pages/ErrorPage';
+import { Cart, Category, ErrorPage, Home, Layout, Login, Menu, Product } from './pages';
+import { Suspense } from 'react';
 function App() {
 
   const router = createBrowserRouter([
     {
       path: '/',
-      element: <Home />
-    },
-    {
-      path: 'menu',
-      element: <Menu />
-    },
-    {
-      path: 'menu/:category',
-      element: <Category />
-    },
-    {
-      path: 'product/:id',
-      element: <Product />
-    },
-    {
-      path: 'login',
-      element: <Login />
-    },
-    {
-      path: 'cart',
-      element: <Cart />
-    },
+      element: <Layout />,
+      children: [
+        {
+          path: '/',
+          element:
+            <Suspense fallback={<h1>Loading ....</h1>}>
+              <Home />
+            </Suspense>
+        },
+        {
+          path: 'menu',
+          element:
+            <Suspense fallback={<h1>Loading ....</h1>}>
+              <Menu />
+            </Suspense>
+        },
+        {
+          path: 'menu/:category',
+          element:
+            <Suspense fallback={<h1>Loading ....</h1>}>
+              <Category />
+            </Suspense>
+        },
+        {
+          path: 'product/:id',
+          element:
+            <Suspense fallback={<h1>Loading ....</h1>}>
+              <Product />
+            </Suspense>
+        },
+        {
+          path: 'login',
+          element:
+            <Suspense fallback={<h1>Loading ....</h1>}>
+              <Login />
+            </Suspense>
+        },
+        {
+          path: 'cart',
+          element:
+            <Suspense fallback={<h1>Loading ....</h1>}>
+              <Cart />
+            </Suspense>
+        },
 
-    {
-      path: '*',
-      element: <ErrorPage />
+        {
+          path: '*',
+          element:
+            <Suspense fallback={<h1>Loading ....</h1>}>
+              <ErrorPage />
+            </Suspense>
+        }
+      ]
     }
   ])
 

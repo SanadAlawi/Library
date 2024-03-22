@@ -1,5 +1,5 @@
 import Feature from "./Feature"
-import { featureds } from "./utils"
+import { books } from "./utils"
 
 
 
@@ -10,7 +10,7 @@ const Features = () => {
 
             <div className="flex w-max">
                 {
-                    featureds.map(feature =>
+                    books.map(feature =>
                         <Feature key={feature.id} {...feature} />
                     )
                 }

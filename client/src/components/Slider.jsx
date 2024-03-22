@@ -1,23 +1,7 @@
 import { useEffect } from "react";
 import { useState } from "react";
+import { SliderData } from "./utils";
 
-const data = [
-    {
-        id: 1,
-        title: "always fresh & always crispy & always hot",
-        image: "https://source.unsplash.com/milk-and-honey-by-rupi-kaur-book-on-side-table-CXYPfveiuis",
-    },
-    {
-        id: 2,
-        title: "we deliver your order wherever you are in NY",
-        image: "https://source.unsplash.com/matt-ridleys-how-innovation-works-H-LIL57PHCc",
-    },
-    {
-        id: 3,
-        title: "the best pizza to share with your family",
-        image: "https://source.unsplash.com/a-book-sitting-on-top-of-a-white-table-Cp5ofLz1gOM",
-    },
-];
 
 const Slider = () => {
 
@@ -25,7 +9,7 @@ const Slider = () => {
 
     useEffect(() => {
         const interval = setInterval(() =>
-        setIndex(prevIndex => (prevIndex == data.length - 1 ? 0 : prevIndex + 1))
+        setIndex(prevIndex => (prevIndex == SliderData.length - 1 ? 0 : prevIndex + 1))
         , 5000)
 
         return () => clearInterval(interval)
@@ -36,13 +20,14 @@ const Slider = () => {
 
             <div className="flex-1 flex flex-col items-center justify-center gap-4">
                 <div className="uppercase font-bold text-primary text-center text-4xl md:text-5xl lg:text-6xl">
-                    {data[index].title}
+                    {SliderData[index].title}
                 </div>
-                <button className="text-white bg-primary px-8 py-4">Order Node</button>
+                <button className="text-white bg-primary px-8 py-4">Order Now</button>
             </div>
 
             <div className="relative flex-1 w-full h-ful">
-                <img src={data[index].image} alt="" className="absolute object-cover w-full h-full" />
+                
+                <img loading="lazy" src={SliderData[index].image} alt="" className="absolute object-contain w-full h-full" />
             </div>
 
         </div>

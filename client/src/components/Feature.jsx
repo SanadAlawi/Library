@@ -5,8 +5,8 @@ const Feature = (feature) => {
 
   return (
     <div className="p-4 hover:bg-primary_light cursor-pointer  flex flex-col items-center gap-2 h-[60vh] w-screen md:w-[50vw] xl:w-[33vw]">
-      <div className="flex-1 relative w-full bg-green-500">
-        <img className="absolute object-cover w-full h-full" src={img} alt="" />
+      <div className="flex-1 relative w-full">
+        <img loading="lazy" className="absolute object-contain w-full h-full" src={img} alt="" />
       </div>
 
       <div className="flex-1 text-primary flex flex-col items-center gap-4">
