@@ -1,24 +1,24 @@
 import { ArrowBackIosNew, ArrowForwardIos } from "@mui/icons-material"
-import { useState } from "react"
+import useAddToCart from "./utils/useAddToCart"
+import useQuantityCounter from "./utils/useQuantityCounter"
 
-export const Price = ({productPrice}) => {
+export const BookCounter = (book) => {
 
-    const [count, setCount] = useState(1)
-    let price = (productPrice * count).toFixed(2)
+    const [count, handleIncrement, handleDecrement] = useQuantityCounter()
+    let price = (book.price * count).toFixed(2)
 
-    const handleIncrement = () => {
-        setCount(prevCount => prevCount < 10 ? prevCount + 1 : prevCount)
+    const addToCart = useAddToCart()
+    const handleAddBook = () => {
+        addToCart(book, count)
     }
 
-    const handleDecrement = () => {
-        setCount(prevCount => prevCount > 1 ? prevCount - 1 : prevCount)
-    }
+    const maxQuantityMessage = count == 10 ? 'Max Quantity': ''
 
     return (
         <div className='flex flex-col gap-5'>
 
             {/* PRICE */}
-            <p className='font-bold text-2xl'>${price}</p>
+            <p className='font-bold text-2xl'>${price} <span className="text-red-600 text-sm">{maxQuantityMessage}</span> </p>
 
             <div className="flex">
                 <div className='flex-1 flex justify-between items-center border border-primary p-1'>
@@ -33,7 +33,8 @@ export const Price = ({productPrice}) => {
                 </div>
 
                 {/* ADD TO CARD BUTTON */}
-                <button className='text-white bg-primary px-4 py-2 uppercase'>add to cart</button>
+                {/* <AddToCartButton book={book} quantity={count} /> */}
+                <button className='text-white bg-primary px-4 py-2 uppercase' onClick={handleAddBook}>add to cart</button>
             </div>
 
         </div>

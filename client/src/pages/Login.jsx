@@ -9,7 +9,7 @@ const Login = () => {
       <div className='shadow-md h-full flex flex-col rounded overflow-hidden border md:w-full md:flex-row md:h-[70%] lg:w-[60%]'>
 
         <div className='relative h-1/3 w-full md:h-full md:w-1/2'>
-          <img loading="lazy" className='absolute w-full h-full object-cover' src="https://source.unsplash.com/a-book-sitting-on-top-of-a-white-table-Cp5ofLz1gOM" alt="" />
+          <img loading="lazy" className='absolute w-full h-full object-contain' src="/Library/images/self-development 1.png" alt="" />
         </div>
 
         <div className='p-10 flex flex-col gap-8 text-black md:w-1/2'>

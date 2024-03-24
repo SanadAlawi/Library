@@ -1,7 +1,7 @@
+import { Suspense } from 'react';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import './App.css';
-import { Cart, Category, ErrorPage, Home, Layout, Login, Menu, Product } from './pages';
-import { Suspense } from 'react';
+import { Book, Cart, Category, ErrorPage, Home, Layout, Login, Menu } from './pages';
 function App() {
 
   const router = createBrowserRouter([
@@ -34,7 +34,7 @@ function App() {
           path: 'product/:id',
           element:
             <Suspense fallback={<h1>Loading ....</h1>}>
-              <Product />
+              <Book />
             </Suspense>
         },
         {
