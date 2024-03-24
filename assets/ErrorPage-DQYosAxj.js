@@ -1,0 +1,1 @@
+import{j as e,L as r}from"./index-BFLPKW7I.js";const t=()=>e.jsxs("div",{className:"h-[calc(100vh-6rem)] flex flex-col gap-8 items-center justify-center md:h-[calc(100vh-9rem)]",children:[e.jsx("h1",{className:"text-2xl font-bold",children:"Error Not Found"}),e.jsx(r,{className:"bg-primary text-white px-4 py-2 rounded",children:"Go Home"})]});export{t as default};
