@@ -9,7 +9,7 @@ const Navbar = () => {
       {/* DESCTOP LEFT MENU */}
       <ul className="hidden md:flex items-center gap-4 text-primary uppercase">
         <Link to='/'><li className="cursor-pointer">home</li></Link>
-        <Link to='/menu'><li className="cursor-pointer">menu</li></Link>
+        <Link to='/genres'><li className="cursor-pointer">genres</li></Link>
       </ul>
 
       {/* LOGO */}

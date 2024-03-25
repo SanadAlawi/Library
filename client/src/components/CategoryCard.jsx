@@ -10,7 +10,7 @@ const CategoryCard = (book) => {
 
     return (
         <div className='p-4  group flex flex-col items-center justify-between w-full h-[60vh] border border-r-primary border-b-primary md:w-1/2 lg:w-1/3 odd:bg-primary_light'>
-            <Link to={`/product/${book.id}`} className='relative h-[80%] w-full'>
+            <Link to={`/book/${book.id}`} className='relative h-[80%] w-full'>
                 <img loading="lazy" className='absolute object-contain bg-gr w-full h-full  ' src={book.img} alt="" />
             </Link>
             <div className='flex w-full justify-between items-center font-bold uppercase text-primary'>

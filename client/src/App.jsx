@@ -1,7 +1,8 @@
 import { Suspense } from 'react';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import './App.css';
-import { Book, Cart, Category, ErrorPage, Home, Layout, Login, Menu } from './pages';
+import { Book, Cart, Category, ErrorPage, Home, Layout, Login } from './pages';
+import Genres from './pages/Genres';
 function App() {
 
   const router = createBrowserRouter([
@@ -17,21 +18,21 @@ function App() {
             </Suspense>
         },
         {
-          path: 'menu',
+          path: 'genres',
           element:
             <Suspense fallback={<h1>Loading ....</h1>}>
-              <Menu />
+              <Genres />
             </Suspense>
         },
         {
-          path: 'menu/:category',
+          path: 'genres/:category',
           element:
             <Suspense fallback={<h1>Loading ....</h1>}>
               <Category />
             </Suspense>
         },
         {
-          path: 'product/:id',
+          path: 'book/:id',
           element:
             <Suspense fallback={<h1>Loading ....</h1>}>
               <Book />

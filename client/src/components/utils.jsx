@@ -62,12 +62,12 @@ export const SliderData = [
   {
     id: 1,
     title: "Embark on a thrilling journey through uncharted territories",
-    image: "/Library/images/adventure 1.png",
+    image: "/Library/images/adventure 4.png",
   },
   {
     id: 2,
     title: "Step into the shoes of a seasoned detective",
-    image: "/Library/images/crime 1.png",
+    image: "/Library/images/crime 4.png",
   },
   {
     id: 3,

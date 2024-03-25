@@ -14,7 +14,7 @@ const Summery = () => {
         <div className='p-4 bg-primary_light text-primary flex flex-col gap-4 w-full h-1/2 md:h-full md:w-1/3 md:px-20 md:justify-center lg:w-1/2 lg:px-40'>
 
             <div className='flex justify-between'>
-                <span>Subtotal (3 items)</span>
+                <span>Subtotal ({list.length} items)</span>
                 <span>${subTotal}</span>
             </div>
 
