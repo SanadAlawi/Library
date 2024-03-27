@@ -12,10 +12,8 @@ const CartCard = (book) => {
     }
 
     return (
-        <Link to={`/product/${id}`}  className='text-primary flex justify-between items-center gap-8'>
-            {/* <Link to={`/product/${id}`}> */}
+        <Link to={`/book/${id}`}  className='text-primary flex justify-between items-center gap-8'>
                 <img loading="lazy" className=' h-[100px] w-[100px] object-contain' src={img} alt="" />
-            {/* </Link> */}
             <div>
                 <h1 className='uppercase text-xl font-bold'>{title}</h1>
                 <span className="">Quantity: {quantity}</span>

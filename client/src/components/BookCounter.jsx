@@ -1,6 +1,7 @@
 import { ArrowBackIosNew, ArrowForwardIos } from "@mui/icons-material"
 import useAddToCart from "./utils/useAddToCart"
 import useQuantityCounter from "./utils/useQuantityCounter"
+import SuccessMessage from "./SuccessMessage"
 
 export const BookCounter = (book) => {
 
@@ -36,6 +37,8 @@ export const BookCounter = (book) => {
                 {/* <AddToCartButton book={book} quantity={count} /> */}
                 <button className='text-white bg-primary px-4 py-2 uppercase' onClick={handleAddBook}>add to cart</button>
             </div>
+
+            <SuccessMessage message='Book Added Successfully' color='red' />
 
         </div>
     )

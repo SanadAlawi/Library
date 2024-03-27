@@ -19,6 +19,8 @@ Book Finder is a web application designed to help users discover and explore a w
     ```
     npm install
     npm install react-router-dom @mui/icons-material @mui/material @emotion/styled @emotion/react
+    npm install @reduxjs/toolkit
+    npm install react-redux
     ```
 3. For instructions on how to install Tailwind CSS for Vite applications, refer to the [Tailwind CSS documentation](https://tailwindcss.com/docs/guides/vite).
 4. Start the development server by running `npm start`.
