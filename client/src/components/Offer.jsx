@@ -18,7 +18,7 @@ const Offer = () => {
             </div>
 
             <div className="w-full h-full relative">
-                <img loading="lazy" className="absolute object-contain w-full h-full text-white" src="/Library/images/adventure 6.png" alt="Adventure image" />
+                <img loading="lazy" className="absolute object-contain w-full h-full text-white" src="/images/adventure 6.png" alt="Adventure image" />
             </div>
 
 

@@ -6,7 +6,7 @@ const initialState = [
         id: 28,
         title: "The Legendary Explorer",
         desc: "Embark on a daring expedition to uncharted lands, braving treacherous terrain and ancient ruins in search of fame and fortune.",
-        img: "/Library/images/adventure 7.png",
+        img: "/images/adventure 7.png",
         genre: 'adventure',
         price: 25.6,
         quantity: 1
@@ -15,7 +15,7 @@ const initialState = [
         id: 29,
         title: "The Pirate's Treasure",
         desc: "Sail the high seas in search of hidden treasure, battling rival pirates and mythical creatures in a swashbuckling adventure.",
-        img: "/Library/images/adventure 8.png",
+        img: "/images/adventure 8.png",
         genre: 'adventure',
         price: 23.9,
         quantity: 1
